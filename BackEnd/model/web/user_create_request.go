@@ -1,0 +1,9 @@
+package web
+
+type UserCreateRequest struct {
+	Username  string `json:"username" validate:"required,max=200,min=1"`
+	Password  string `json:"password" validate:"required,max=200,min=1"`
+	Email     string `json:"email" validate:"required,max=200,min=1"`
+	NoTelepon string `json:"no_telepon" validate:"required,max=200,min=1"`
+	Role      bool   `json:"role"`
+}
